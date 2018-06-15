@@ -22,7 +22,7 @@ class MusicLibraryController
       puts "To quit, type 'exit'."
       user_input = gets.strip
 
-      break if user_input = "exit"
+      break if user_input == "exit"
     end
 
   end
