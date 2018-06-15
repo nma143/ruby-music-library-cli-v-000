@@ -31,6 +31,7 @@ class MusicLibraryController
         when 'list genres'
           list_genres
         when 'list artist'
+          list_songs_by_artist
         when 'list genre'
         when 'play song'
         else
@@ -61,6 +62,12 @@ class MusicLibraryController
     sorted_genres.each_with_index {|genre, index|
       puts "#{index+1}. #{genre.name}"
     }
+  end
+
+  def list_songs_by_artist
+    puts "Enter an artist:"
+    user_input = gets.strip
+    
   end
 
 end
