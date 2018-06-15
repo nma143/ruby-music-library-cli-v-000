@@ -98,6 +98,7 @@ class MusicLibraryController
     list_songs
     user_input = gets.strip.to_i
     if user_input >0 && user_input <=list_songs.count
+      song = list_songs[user_input -1]
       puts "Playing #{song.name} by #{song.artist.name}"
     end
 
