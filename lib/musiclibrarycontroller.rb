@@ -21,8 +21,19 @@ class MusicLibraryController
       puts "To play a song, enter 'play song'."
       puts "To quit, type 'exit'."
       user_input = gets.strip
-
       break if user_input == "exit"
+
+      case user_input
+        when 'list songs'
+        when 'list artists'
+        when 'list genres'
+        when 'list artist'
+        when 'list genre'
+        when 'play song'
+        else
+          puts "Invalid Entry"        
+      end
+      
     end
 
   end
