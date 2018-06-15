@@ -33,6 +33,7 @@ class MusicLibraryController
         when 'list artist'
           list_songs_by_artist
         when 'list genre'
+          list_songs_by_genre
         when 'play song'
         else
           puts "Invalid Entry"
@@ -75,6 +76,11 @@ class MusicLibraryController
         puts "#{index+1}. #{song.name} - #{song.genre.name}"
       }
     end
+  end
+
+  def list_songs_by_genre
+
+
   end
 
 end
