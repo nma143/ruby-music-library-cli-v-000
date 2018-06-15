@@ -27,6 +27,7 @@ class MusicLibraryController
         when 'list songs'
           list_songs
         when 'list artists'
+          list_artists
         when 'list genres'
         when 'list artist'
         when 'list genre'
@@ -45,7 +46,13 @@ class MusicLibraryController
     sorted_songs.each_with_index {|song, index|
       puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     }
+  end
 
+  def list_artists
+    sorted_artists = Artist.all.sort{|x, y| x.name <=>y.name}
+    sorted_artist.each_with_index {|song, index|
+      puts "#{index+1}. #{artist.name}"
+    }
   end
 
 end
