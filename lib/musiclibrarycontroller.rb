@@ -65,12 +65,15 @@ class MusicLibraryController
   end
 
   def list_songs_by_artist
-
+    count = 0
     loop do
       puts "Please enter the name of an artist:"
       user_input = gets.strip
       artist_requested = Artist.find_by_name(user_input)
+      puts user_input
+      count = count +1
       break if artist_requested != nil
+      break if count > 5
     end
 
     sorted_songs = artist_requested.songs.sort{|x, y| x.name <=>y.name}
