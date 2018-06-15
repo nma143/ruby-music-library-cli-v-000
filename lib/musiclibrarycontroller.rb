@@ -66,7 +66,7 @@ class MusicLibraryController
 
   def list_songs_by_artist
 
-    do
+    loop do
       puts "Please enter the name of an artist:"
       user_input = gets.strip
       artist_requested = Artist.find_by_name(user_input)
