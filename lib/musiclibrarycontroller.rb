@@ -72,14 +72,12 @@ class MusicLibraryController
       artist_requested = Artist.find_by_name(user_input)
       break if artist_requested != nil
     end
-    
 
-    if 
-      sorted_songs = artist_requested.songs.sort{|x, y| x.name <=>y.name}
-      sorted_songs.each_with_index {|song, index|
-        puts "#{index+1}. #{song.name} - #{song.genre.name}"
-      }
-    end
+    sorted_songs = artist_requested.songs.sort{|x, y| x.name <=>y.name}
+    sorted_songs.each_with_index {|song, index|
+      puts "#{index+1}. #{song.name} - #{song.genre.name}"
+    }
+
   end
 
 end
