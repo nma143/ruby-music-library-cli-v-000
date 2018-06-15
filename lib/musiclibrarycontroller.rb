@@ -97,6 +97,9 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     list_songs
     user_input = gets.strip
+    if user_input >0 && user_input <=list_songs.count
+      puts "Playing #{song.name} by #{song.artist.name}"
+    end
 
   end
 
