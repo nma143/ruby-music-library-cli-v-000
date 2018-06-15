@@ -31,9 +31,9 @@ class MusicLibraryController
         when 'list genre'
         when 'play song'
         else
-          puts "Invalid Entry"        
+          puts "Invalid Entry"
       end
-      
+
     end
 
   end
